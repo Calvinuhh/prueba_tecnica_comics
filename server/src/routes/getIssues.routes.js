@@ -7,6 +7,6 @@ import {
 const issuesRouter = Router();
 
 issuesRouter.get("/", getIssuesController);
-issuesRouter.get("/details", getDetailsController);
+issuesRouter.get("/:id", getDetailsController);
 
 export default issuesRouter;

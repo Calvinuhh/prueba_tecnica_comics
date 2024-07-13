@@ -14,6 +14,7 @@ export default (database) => {
       image: DataTypes.STRING,
       issue_number: DataTypes.SMALLINT,
       volume: DataTypes.STRING,
+      detail_url: DataTypes.STRING,
     },
     { timestamps: false }
   );

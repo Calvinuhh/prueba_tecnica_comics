@@ -1,4 +1,6 @@
-import { Issue, Detail } from "../database/db.js";
+import { Issue } from "../database/db.js";
+
+const { API_KEY, MAIN_URL } = process.env;
 
 export const getIssuesController = async (req, res) => {
   try {
@@ -11,11 +13,16 @@ export const getIssuesController = async (req, res) => {
 };
 
 export const getDetailsController = async (req, res) => {
-  const { id } = req.query;
-  try {
-    const details = await Detail.findAll();
+  const { id } = req.params;
 
-    res.status(200).json(details);
+  const petition = await fetch(
+    `${MAIN_URL}/issue/4000-${id}?api_key=${API_KEY}&format=json`
+  );
+
+  const { results } = await petition.json();
+
+  res.status(200).json(results);
+  try {
   } catch (error) {
     res.status(400).json(error.message);
   }

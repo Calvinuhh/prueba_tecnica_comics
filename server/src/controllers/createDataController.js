@@ -4,7 +4,7 @@ const { API_KEY, MAIN_URL } = process.env;
 
 export async function createIssuesData() {
   const petition = await fetch(
-    `${MAIN_URL}/issues?api_key=${API_KEY}&format=json&limit=30`
+    `${MAIN_URL}/issues?api_key=${API_KEY}&format=json&limit=40`
   );
 
   const { results } = await petition.json();
@@ -16,6 +16,7 @@ export async function createIssuesData() {
       image: elem.image.original_url,
       issue_number: elem.issue_number,
       volume: elem.volume.name,
+      detail_url: elem.api_detail_url,
     };
   });
 
