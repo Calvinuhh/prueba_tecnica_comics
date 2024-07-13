@@ -1,7 +1,7 @@
-import app from "./src/server.js";
+import server from "./src/server.js";
 
 const { PORT } = process.env;
 
-app.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto: ${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto: http://localhost:${PORT}`);
 });

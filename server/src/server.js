@@ -1,8 +1,11 @@
 import express from "express";
-import testRouter from "./routes/test.routes.js";
+import issuesRouter from "./routes/getIssues.routes.js";
+import { json } from "express";
 
-const app = express();
+const server = express();
 
-app.use(testRouter);
+server.use(json());
 
-export default app;
+server.use("/issues", issuesRouter);
+
+export default server;
