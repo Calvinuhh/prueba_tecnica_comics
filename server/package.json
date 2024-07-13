@@ -1,0 +1,22 @@
+{
+  "name": "prueba_tecnica_motion_tech_calvin",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Desarrollo de prueba tecnica por parte de Calvin Howard",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file .env index.js",
+    "dev": "nodemon --env-file .env index.js"
+  },
+  "author": "calvin_howard",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
