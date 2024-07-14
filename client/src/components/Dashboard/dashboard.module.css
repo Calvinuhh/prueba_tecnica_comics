@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+#image {
+  width: 500px;
+  mask-image: linear-gradient(black 40%, transparent);
+}
+
+#title {
+  font-family: "raleway";
+  color: antiquewhite;
+  text-shadow: 2px 2px 0px black, -2px 2px 0px black, 2px -2px 0px black,
+    -2px -2px 0px black, 2px 0px 0px black, -2px 0px 0px black,
+    0px 2px 0px black, 0px -2px 0px black;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+#next_button {
+  font-family: "roboto";
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 7px;
+  width: 140px;
+  height: 45px;
+  border: 2px solid black;
+  background-color: rgb(228, 198, 198);
+  -webkit-box-shadow: 8px 10px 20px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 10px 20px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px 10px 20px -6px rgba(0, 0, 0, 0.75);
+  transition: ease 1s;
+}
+
+#next_button:hover {
+  transform: scale(1.06);
+  cursor: pointer;
+  background-color: rgb(223, 155, 155);
+}
