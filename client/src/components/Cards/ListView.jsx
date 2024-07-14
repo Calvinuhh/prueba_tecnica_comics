@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import style from "./listView.module.css";
 
 const ListView = ({ data }) => {
-  
   const containersRef = useRef([]);
 
   const getLastUrlParam = (url) => {
@@ -30,12 +29,18 @@ const ListView = ({ data }) => {
       { threshold: 0.1 }
     );
 
-    containersRef.current.forEach((container) => {
-      observer.observe(container);
-    });
+    containersRef.current
+      .filter((container) => container !== null)
+      .forEach((container) => {
+        observer.observe(container);
+      });
 
     return () => observer.disconnect();
-  }, []);
+  }, [data]);
+
+  useEffect(() => {
+    containersRef.current = [];
+  }, [data]);
 
   return (
     <div id={style.main_container}>
@@ -56,7 +61,15 @@ const ListView = ({ data }) => {
               alt={`${elem.volume} image`}
             />
           </Link>
-          <div className={style.image_overlay}>Ver detalles</div>
+
+          <Link
+            to={{
+              pathname: `/detail/${getLastUrlParam(elem.detail_url)}`,
+            }}
+            className={style.image_overlay}
+          >
+            <div>Ver detalles</div>
+          </Link>
           <h1 className={style.volume}>{elem.volume}</h1>
           <h2 className={style.name}>
             {elem.name ? `Nombre: ${elem.name}` : null}

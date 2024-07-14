@@ -27,7 +27,6 @@ export const getDetailsController = async (req, res) => {
       name: results.name,
       image: results.image && results.image.original_url,
       date: results.cover_date,
-      description: results.description,
       issue_number: results.issue_number,
       characters: results.character_credits.map((elem) => elem.name),
       authors: results.person_credits.map((elem) => elem.name),

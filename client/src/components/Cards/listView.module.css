@@ -39,6 +39,9 @@
   width: 300px;
   border-radius: 7px;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  -webkit-box-shadow: 8px 10px 20px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 10px 20px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px 10px 20px -6px rgba(0, 0, 0, 0.75);
 }
 
 .image:hover {
@@ -93,4 +96,38 @@
 .fade-in-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (width < 1320px) {
+  #main_container {
+    width: 1000px;
+  }
+}
+
+@media (width < 875px) {
+  #main_container {
+    width: 700px;
+    justify-content: center;
+  }
+}
+
+@media (width < 700px) {
+  #main_container {
+    width: 500px;
+  }
+}
+
+@media (width < 450px) {
+  #main_container {
+    width: 300px;
+  }
+
+  .image {
+    width: 180px;
+  }
+
+  .image_overlay {
+    font-size: 30px;
+    top: 200px;
+  }
 }

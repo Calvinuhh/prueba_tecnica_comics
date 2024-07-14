@@ -44,3 +44,38 @@
   cursor: pointer;
   background-color: rgb(223, 155, 155);
 }
+
+@media (width < 740px) {
+  .container {
+    width: 500px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (width < 510px) {
+  .container {
+    width: 400px;
+    text-align: center;
+  }
+  #image {
+    width: 400px;
+  }
+
+  #title {
+    font-size: 30px;
+  }
+}
+
+@media (width < 410px) {
+  .container {
+    width: 300px;
+  }
+
+  #image {
+    width: 300px;
+  }
+  #title {
+    font-size: 20px;
+  }
+}

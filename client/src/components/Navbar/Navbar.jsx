@@ -1,17 +1,21 @@
 import style from "./navbar.module.css";
 
-const NavBar = ({ view, setView }) => {
+const NavBar = ({ view, setView, setSearchTerm }) => {
   return (
     <nav className={style.container}>
-      <div>
+      <div id={style.container_options}>
         <label id={style.label}>Vista:</label>
         <select
           id={style.select}
           value={view}
           onChange={(event) => setView(event.target.value)}
         >
-          <option value="list">Lista</option>
-          <option value="grid">Grilla</option>
+          <option className={style.options} value="list">
+            Lista
+          </option>
+          <option className={style.options} value="grid">
+            Grilla
+          </option>
         </select>
       </div>
 
@@ -25,6 +29,7 @@ const NavBar = ({ view, setView }) => {
           name="volume"
           placeholder="volumen..."
           id={style.input}
+          onChange={(event) => setSearchTerm(event.target.value)}
         />
       </div>
     </nav>

@@ -47,3 +47,45 @@
   padding-left: 20px;
   border-radius: 7px;
 }
+
+@media (width < 875px) {
+  .container {
+    flex-direction: column;
+    height: 240px;
+  }
+}
+
+@media (width < 875px) {
+  #input {
+    width: 200px;
+  }
+}
+
+@media (width < 330px) {
+  #label,
+  #label_search {
+    font-size: 15px;
+  }
+
+  #container_options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+  }
+
+  #select {
+    font-size: 15px;
+    width: 100px;
+    height: 20px;
+  }
+  .options {
+    font-size: 15px;
+    padding: 0;
+  }
+  #input {
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
