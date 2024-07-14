@@ -19,12 +19,10 @@ const Home = () => {
         const { data } = await axios.get(VITE_SERVER_URL);
 
         setData(data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data: ", error);
-      } finally {
-        setTimeout(() => {
-          setLoading(false);
-        }, 3000);
+        setLoading(false);
       }
     };
 

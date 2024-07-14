@@ -15,14 +15,24 @@ export const getIssuesController = async (req, res) => {
 export const getDetailsController = async (req, res) => {
   const { id } = req.params;
 
-  const petition = await fetch(
-    `${MAIN_URL}/issue/4000-${id}?api_key=${API_KEY}&format=json`
-  );
-
-  const { results } = await petition.json();
-
-  res.status(200).json(results);
   try {
+    const petition = await fetch(
+      `${MAIN_URL}/issue/4000-${id}?api_key=${API_KEY}&format=json`
+    );
+
+    const { results } = await petition.json();
+
+    res.status(200).json({
+      volume: results.volume.name,
+      name: results.name,
+      image: results.image && results.image.original_url,
+      date: results.cover_date,
+      description: results.description,
+      issue_number: results.issue_number,
+      characters: results.character_credits.map((elem) => elem.name),
+      authors: results.person_credits.map((elem) => elem.name),
+      locations: results.location_credits.map((elem) => elem.name),
+    });
   } catch (error) {
     res.status(400).json(error.message);
   }

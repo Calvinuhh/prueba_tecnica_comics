@@ -7,7 +7,12 @@ import { json } from "express";
 
 const server = express();
 
-server.use(cors());
+server.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: "GET",
+  })
+);
 server.use(morgan("dev"));
 server.use(json());
 

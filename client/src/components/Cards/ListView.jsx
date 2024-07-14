@@ -1,9 +1,21 @@
 import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import style from "./listView.module.css";
 
 const ListView = ({ data }) => {
+  
   const containersRef = useRef([]);
+
+  const getLastUrlParam = (url) => {
+    const regex = /-(\d+)\/$/;
+    const match = url.match(regex);
+    if (match) {
+      return match[1];
+    } else {
+      return null;
+    }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,11 +45,17 @@ const ListView = ({ data }) => {
           className={`${style.container} ${style.fade_in}`}
           key={elem.id}
         >
-          <img
-            className={style.image}
-            src={elem.image}
-            alt={`${elem.volume} image`}
-          />
+          <Link
+            to={{
+              pathname: `/detail/${getLastUrlParam(elem.detail_url)}`,
+            }}
+          >
+            <img
+              className={style.image}
+              src={elem.image}
+              alt={`${elem.volume} image`}
+            />
+          </Link>
           <div className={style.image_overlay}>Ver detalles</div>
           <h1 className={style.volume}>{elem.volume}</h1>
           <h2 className={style.name}>
