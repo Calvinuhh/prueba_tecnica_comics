@@ -18,18 +18,49 @@
   justify-content: center;
   align-items: center;
   margin-left: 35px;
-
+  position: relative;
   width: 400px;
   height: 500px;
   gap: 10px;
   text-align: center;
   margin-bottom: 110px;
   margin-top: 90px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.container.fade_in_visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .image {
   width: 300px;
   border-radius: 7px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: 0.4;
+}
+
+.image_overlay {
+  position: absolute;
+  color: white;
+  text-shadow: 2px 2px 0px black, -2px 2px 0px black, 2px -2px 0px black,
+    -2px -2px 0px black, 2px 0px 0px black, -2px 0px 0px black,
+    0px 2px 0px black, 0px -2px 0px black;
+  font-size: 50px;
+  bottom: 160px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.container:hover .image_overlay {
+  opacity: 1;
 }
 
 .volume {
@@ -51,4 +82,15 @@
 
 .comic_number {
   font-family: "raleway";
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
