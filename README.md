@@ -53,6 +53,7 @@ En el `.env` de `client` estas seran las variables de entorno:
 ```
 VITE_SERVER_URL=http://localhost:{PORT}/issues
 ```
+Tener en cuenta que en el `VITE_SERVER_URL` el `PORT` es el puerto en el que esta escuchando el servidor 
 
 
 El siguiente paso sera crear una base de datos PostgreSQL, implementando `pgAdmin` o `psql`, asegurarse que el `DATABASE_NAME` sea igual al nombre de la base de datos al momento de crearla, sino el proyecto no funcionara
