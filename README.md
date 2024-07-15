@@ -63,3 +63,8 @@ npm run dev
 ```
 
 En la terminar del front copiar la url donde se esta ejecutando el proyecto para asi poder visualizarlo en el navegador 👍👍
+
+Tambien se realizo un deploy de prueba en el servicio de `Render`, se puede ver aqui:
+```
+https://front-test-2pg1.onrender.com/
+```
