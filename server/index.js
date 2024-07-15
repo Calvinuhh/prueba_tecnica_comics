@@ -5,7 +5,7 @@ import { createIssuesData } from "./src/controllers/createDataController.js";
 const { PORT } = process.env;
 
 database
-  .sync({ alter: true })
+  .sync()
   .then(() => {
     server.listen(PORT, () => {
       console.log("Conexion con la base de datos exitosa");
