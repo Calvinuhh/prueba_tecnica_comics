@@ -2,7 +2,6 @@ import style from "./gridView.module.css";
 import { Link } from "react-router-dom";
 
 const GridView = ({ data }) => {
-  
   const getLastUrlParam = (url) => {
     const regex = /-(\d+)\/$/;
     const match = url.match(regex);
@@ -26,7 +25,7 @@ const GridView = ({ data }) => {
         </thead>
         <tbody>
           {data.map((elem) => (
-            <tr key={elem.id}>
+            <tr key={elem._id}>
               <td className={`${style.table_data} ${style.volume}`}>
                 <Link
                   to={{

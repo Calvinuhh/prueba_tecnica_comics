@@ -48,7 +48,7 @@ const ListView = ({ data }) => {
         <div
           ref={(el) => (containersRef.current[index] = el)}
           className={`${style.container} ${style.fade_in}`}
-          key={elem.id}
+          key={elem._id}
         >
           <Link
             to={{
