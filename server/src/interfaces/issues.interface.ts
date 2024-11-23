@@ -8,9 +8,9 @@ export default interface Issue {
   detail_url: string;
 }
 
-export interface APIInterface {
+export interface APIResponse {
   results: Array<{
-    name: string;
+    name?: string;
     cover_date: string;
     image: { original_url: string };
     issue_number: string;
@@ -19,4 +19,15 @@ export interface APIInterface {
   }>;
 }
 
-// export type IssueDTO = Omit<Issue, "_id">;
+export interface IssueById {
+  volume: string;
+  name?: string;
+  image: string;
+  date: string;
+  issue_number: string;
+  characters: Array<{ name: string }>;
+  authors: Array<{ name: string }>;
+  locations: Array<{ name: string }>;
+}
+
+export type MapData = { name: string };

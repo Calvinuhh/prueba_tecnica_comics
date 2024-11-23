@@ -9,12 +9,12 @@ const { FRONTEND_URL } = process.env;
 
 const server = express();
 
-// server.use(
-//   cors({
-//     origin: FRONTEND_URL,
-//     methods: "GET",
-//   })
-// );
+server.use(
+  cors({
+    origin: FRONTEND_URL,
+    methods: "GET",
+  })
+);
 server.use(json());
 server.use(morgan("dev"));
 

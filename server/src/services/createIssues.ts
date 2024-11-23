@@ -1,4 +1,4 @@
-import { APIInterface } from "../interfaces/issues.interface";
+import { APIResponse } from "../interfaces/issues.interface";
 import IssueModel from "../models/Issue";
 
 process.loadEnvFile();
@@ -6,21 +6,23 @@ const { API_KEY, MAIN_URL } = process.env;
 
 const createIssuesData = async (): Promise<void> => {
   const petition = await fetch(
-    `${MAIN_URL}/issues?api_key=${API_KEY}&format=json&limit=50`
+    `${MAIN_URL}/issues?api_key=${API_KEY}&format=json&limit=99`
   );
 
-  const { results }: APIInterface = await petition.json();
+  const { results }: APIResponse = await petition.json();
 
-  const newData = results.map((elem) => {
-    return {
-      name: elem.name,
-      date: elem.cover_date,
-      image: elem.image.original_url,
-      issue_number: elem.issue_number,
-      volume: elem.volume.name,
-      detail_url: elem.api_detail_url,
-    };
-  });
+  const newData = results.map(
+    ({ name, cover_date, image, issue_number, volume, api_detail_url }) => {
+      return {
+        name,
+        date: cover_date,
+        image: image.original_url,
+        issue_number,
+        volume: volume.name,
+        detail_url: api_detail_url,
+      };
+    }
+  );
 
   const issues = await IssueModel.find();
 
