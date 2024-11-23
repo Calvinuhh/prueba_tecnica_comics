@@ -1,8 +1,5 @@
-import { json, Request, Response } from "express";
+import { Request, Response } from "express";
 import { getAllIssues, getIssueById } from "../services/issuesServices";
-
-process.loadEnvFile();
-const { API_KEY, MAIN_URL } = process.env;
 
 export const getIssuesController = async (
   req: Request,

@@ -1,4 +1,4 @@
-import Issue, { IssueById, MapData } from "../interfaces/issues.interface";
+import Issue, { IssueById } from "../interfaces/issues.interface";
 import IssueModel from "../models/Issue";
 
 process.loadEnvFile();
@@ -28,9 +28,15 @@ export const getIssueById = async (id: string): Promise<IssueById> => {
       image: results.image && results.image.original_url,
       date: results.cover_date,
       issue_number: results.issue_number,
-      characters: results.character_credits.map((elem: MapData) => elem.name),
-      authors: results.person_credits.map((elem: MapData) => elem.name),
-      locations: results.location_credits.map((elem: MapData) => elem.name),
+      characters: results.character_credits.map(
+        (elem: { name: string }) => elem.name
+      ),
+      authors: results.person_credits.map(
+        (elem: { name: string }) => elem.name
+      ),
+      locations: results.location_credits.map(
+        (elem: { name: string }) => elem.name
+      ),
     };
 
     return issueById;

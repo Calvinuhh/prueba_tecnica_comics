@@ -29,5 +29,3 @@ export interface IssueById {
   authors: Array<{ name: string }>;
   locations: Array<{ name: string }>;
 }
-
-export type MapData = { name: string };
