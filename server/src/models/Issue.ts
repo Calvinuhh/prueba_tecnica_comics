@@ -1,12 +1,9 @@
 import { Schema, model } from "mongoose";
-import Issue from "../interfaces/issue.interface";
+import Issue from "../interfaces/issues.interface";
 
 const issueSchema = new Schema<Issue>(
   {
-    name: {
-      type: String,
-      unique: true,
-    },
+    name: String,
     date: String,
     image: String,
     issue_number: Number,

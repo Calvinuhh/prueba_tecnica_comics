@@ -1,34 +1,32 @@
-import IssueDTO from "../DTOs/issuesDTO";
-import { FetchResponse } from "../interfaces/issue.interface";
+import { APIInterface } from "../interfaces/issues.interface";
+import IssueModel from "../models/Issue";
 
 process.loadEnvFile();
 const { API_KEY, MAIN_URL } = process.env;
 
-const createIssuesData = async (): Promise<IssueDTO[] | undefined> => {
-  console.log(API_KEY, MAIN_URL);
-
+const createIssuesData = async (): Promise<void> => {
   const petition = await fetch(
-    `${MAIN_URL}/issues?api_key=${API_KEY}&format=json&limit=5`
+    `${MAIN_URL}/issues?api_key=${API_KEY}&format=json&limit=50`
   );
 
-  const { results }: FetchResponse = await petition.json();
+  const { results }: APIInterface = await petition.json();
 
-  const data = results.map(
-    ({ name, date, detail_url, image, issue_number, volume }) => {
-      return {
-        name,
-        date,
-        detail_url,
-        image,
-        issue_number,
-        volume,
-      };
-    }
-  );
+  const newData = results.map((elem) => {
+    return {
+      name: elem.name,
+      date: elem.cover_date,
+      image: elem.image.original_url,
+      issue_number: elem.issue_number,
+      volume: elem.volume.name,
+      detail_url: elem.api_detail_url,
+    };
+  });
 
-  console.log(data);
+  const issues = await IssueModel.find();
 
-  return data;
+  if (issues.length === 0) {
+    await IssueModel.create(newData);
+  }
 };
 
 export default createIssuesData;

@@ -1,5 +1,6 @@
 import { connect } from "mongoose";
 import server from "../server";
+import createIssuesData from "../services/createIssues";
 
 process.loadEnvFile();
 const { PORT } = process.env;
@@ -12,6 +13,7 @@ const dbConnect = async (): Promise<void> => {
     await server.listen(PORT, () => {
       console.log(`Server listening on port: ${PORT}`);
     });
+    await createIssuesData();
   } catch (error) {
     const err = error as Error;
     console.log(err.message);
