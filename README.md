@@ -16,7 +16,7 @@ Se clonara la rama `postgresql_sequelize` unicamente.
 
 utilizando el siguiente comando en la terminar de Visual Studio Code, PowerShell o Bash:
 
-```
+```powershell
 git clone --branch postgresql_sequelize https://github.com/Calvinuhh/prueba_tecnica_comics.git --single-branch
 ```
 
@@ -26,14 +26,14 @@ Encontraremos 2 carpetas, `server` y `client`, ahora vamos a proceder con la ins
 
 ### server
 
-```
+```powershell
 cd server
 npm install
 ```
 
 ### client
 
-```
+```powershell
 cd client
 npm install
 ```
@@ -77,9 +77,3 @@ npm run dev
 ```
 
 En la terminar del front copiar la url donde se esta ejecutando el proyecto para asi poder visualizarlo en el navegador 👍👍
-
-Tambien se realizo un deploy de prueba en el servicio de `Render`, se puede ver aqui:
-
-```
-https://front-test-2pg1.onrender.com/
-```
