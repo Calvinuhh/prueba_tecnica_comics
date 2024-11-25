@@ -5,8 +5,8 @@
   "description": "Desarrollo de prueba tecnica por parte de Calvin Howard",
   "main": "index.js",
   "scripts": {
-    "start": "node --env-file .env index.js",
-    "dev": "nodemon --env-file .env index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "calvin_howard",
   "license": "ISC",
