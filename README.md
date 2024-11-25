@@ -1,6 +1,8 @@
 # Guia para probar el proyecto localmente
 
-este proyecto tiene 2 versiones, la primera version se encuentra en la rama `postgresql_sequelize` y la segunda version se encuentra en la rama `typescript_mongodb_mongoose`, la diferencia entre las dos es que, como sus nombres lo indican la primera rama una fue desarrollada con _PostgreSQL_ y su ORM _Sequelize_ y la segunda fue desarrollada con _TypeScript_, _MongoDB_ y su ODM _Mongoose._
+este proyecto tiene 2 versiones, la primera version se encuentra en la rama `postgresql_sequelize` y la segunda version se encuentra en la rama `typescript_mongodb_mongoose`, la diferencia entre las dos radica en el ***servidor***.
+
+Como sus nombres lo indican, la primera rama el servidor fue desarrollada con _PostgreSQL_ y su ORM _Sequelize_ y la segunda fue desarrollada con _TypeScript_, _MongoDB_ y su ODM _Mongoose._
 
 #### Cada rama cuenta con sus respectivas instrucciones para arrancar el proyecto.
 
