@@ -1,9 +1,9 @@
 # Guia para probar el proyecto localmente
 
-#### este proyecto tiene 2 versiones, la primera version se encuentra en la rama `postgresql_sequelize` y la segunda version se encuentra en la rama `typescript_mongodb_mongoose`, la diferencia entre las dos es que, como sus nombres lo indican la primera rama una fue desarrollada con _PostgreSQL_ y su ORM _Sequelize_ y la segunda fue desarrollada con _TypeScript_, _MongoDB_ y su ODM _Mongoose._
+este proyecto tiene 2 versiones, la primera version se encuentra en la rama `postgresql_sequelize` y la segunda version se encuentra en la rama `typescript_mongodb_mongoose`, la diferencia entre las dos es que, como sus nombres lo indican la primera rama una fue desarrollada con _PostgreSQL_ y su ORM _Sequelize_ y la segunda fue desarrollada con _TypeScript_, _MongoDB_ y su ODM _Mongoose._
 
 #### Cada rama cuenta con sus respectivas instrucciones para arrancar el proyecto.
 
-[postgresql_sequelize](https://github.com/Calvinuhh/prueba_tecnica_comics/tree/postgresql_sequelize)
+### [postgresql_sequelize](https://github.com/Calvinuhh/prueba_tecnica_comics/tree/postgresql_sequelize)
 
-[typescript_mongodb_mongoose](https://github.com/Calvinuhh/prueba_tecnica_comics/tree/typescript_mongodb_mongoose)
+### [typescript_mongodb_mongoose](https://github.com/Calvinuhh/prueba_tecnica_comics/tree/typescript_mongodb_mongoose)
