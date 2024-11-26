@@ -1,7 +1,7 @@
 {
-  "name": "prueba_tecnica_motion_tech_calvin",
+  "name": "prueba_tecnica_comics",
   "version": "1.0.0",
-  "description": "Desarrollo de prueba tecnica por parte de Calvin Howard",
+  "description": "Desarrollo de prueba tecnica",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
