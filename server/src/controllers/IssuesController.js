@@ -1,6 +1,6 @@
 import { Issue } from "../database/db.js";
 
-process.loadEnvFile(".env.demo");
+process.loadEnvFile();
 
 const { API_KEY, MAIN_URL } = process.env;
 
