@@ -62,7 +62,7 @@ En las dos carpetas, tanto en **_server_** como **_client_** cambiaremos el nomb
 
 ### En **_Server_** tendremos un archivo asi:
 
-```powershell
+```
 PORT = (puerto en el que va a escuchar el servidor, por ejemplo 3000)
 
 API_KEY = (api key proveniente de la API Comic Vines)
