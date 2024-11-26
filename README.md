@@ -102,7 +102,7 @@ cd client
 npm install
 ```
 
-## base de datos PostgreSQL
+## Base de datos PostgreSQL
 
 El siguiente paso sera crear una base de datos PostgreSQL, implementando `pgAdmin` o `psql`, asegurarse que el `DATABASE_NAME` en el *.env* del la carpeta ***Server*** sea igual al nombre de la base de datos al momento de crearla, sino el proyecto no funcionara
 
