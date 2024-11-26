@@ -126,7 +126,7 @@ En el cliente se ver algo asi:
 En el servidor se vera algo asi:
 
 ```powershell
-> prueba_tecnica_motion_tech_calvin@1.0.0 dev
+> prueba_tecnica_comics@1.0.0 dev
 > nodemon index.js
 
 [nodemon] 3.1.4
