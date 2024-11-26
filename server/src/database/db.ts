@@ -16,8 +16,8 @@ const dbConnect = async (): Promise<void> => {
     await createIssuesData();
   } catch (error) {
     const err = error as Error;
-    console.log(err.message);
-    throw Error("It was unable to connect to the database");
+    console.log("It was unable to connect to the database");
+    throw Error(err.message);
   }
 };
 
