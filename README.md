@@ -79,7 +79,7 @@ FRONTEND_URL = (URL del cliente)
 
 ### En **_Client_** tendremos un archivo asi:
 
-```powershell
+```
 VITE_SERVER_URL=http://localhost:{PORT}/issues
 ```
 Reemplazaremos las variables por las correspondientes para arrancar el proyecto.
