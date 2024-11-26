@@ -12,7 +12,7 @@ La version de `Node` utilizada para la prueba es la version `22.11.0`, en caso d
 
 Lo siguiente es instalar el repositorio en una carpeta local, en una ubicacion deseada para descargar el repositorio se utilizara el siguiente comando en la terminar de ***Cmd***, ***PowerShell*** o ***Bash***:
 
-```powershell
+```
 git clone https://github.com/Calvinuhh/prueba_tecnica_comics.git
 ```
 
