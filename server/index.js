@@ -2,6 +2,7 @@ import server from "./src/server.js";
 import database from "./src/database/db.js";
 import { createIssuesData } from "./src/controllers/createDataController.js";
 
+process.loadEnvFile();
 const { PORT } = process.env;
 
 database
