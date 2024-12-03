@@ -1,7 +1,5 @@
 import { Issue } from "../database/db.js";
 
-process.loadEnvFile();
-
 const { API_KEY, MAIN_URL } = process.env;
 
 export const getIssuesController = async (req, res) => {

@@ -5,7 +5,6 @@ import morgan from "morgan";
 import cors from "cors";
 import { json } from "express";
 
-process.loadEnvFile();
 const { FRONTEND_URL } = process.env;
 
 const server = express();
